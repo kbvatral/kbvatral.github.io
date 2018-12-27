@@ -127,7 +127,7 @@ body, html {
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>I'm a nerd with a sense of style</em></p>
-  <p>Hello World! I'm a developer and engineer with a passion for music, film, and computers. I'm in my third year at Eastern Nazarene College on the south shore of Boston, MA, studying computer science, mathematics, and physics.</p>
+  <p>Hello World! I'm a developer and engineer with a passion for music, film, and computers. I'm in my senior year at Eastern Nazarene College on the south shore of Boston, MA, studying computer science, mathematics, and physics.</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <img src="assets/images/me.jpg" class="w3-round w3-image" alt="Photo of Me" width="250" height="300">
@@ -153,7 +153,7 @@ body, html {
     <div class="w3-center">
         <span class="circle margin-2">C++</span>
         <span class="circle margin-2">Java</span>
-        <span class="circle margin-2">W3.CSS</span>
+        <span class="circle margin-2">Python</span>
         <span class="circle margin-2">Debian</span>
         <span class="circle margin-2">CentOS</span>
         <span class="circle margin-2">Git/Github</span>
@@ -166,10 +166,10 @@ body, html {
         <div class="w3-row">
           <div class="w3-half w3-right">
               <ul class="w3-ul tool">
-                  <li><i class="fa fa-check"></i> Python</li>
+                  <li><i class="fa fa-check"></i> Apache Spark</li>
                   <li><i class="fa fa-check"></i> MATLAB</li>
                   <li><i class="fa fa-check"></i> PHP</li>
-                  <li><i class="fa fa-check"></i> Django</li>
+                  <li><i class="fa fa-check"></i> Elasticsearch</li>
                 </ul>
           </div>
           <div class="w3-rest"></div>
@@ -226,19 +226,19 @@ body, html {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
+      <img id="fusion" src="assets/images/data_fusion.png" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Data Fusion Algorithm">
+    </div>
+
+    <div class="w3-col m3">
+      <img id="hcl" src="assets/images/HCL-Tech-Logo.jpg" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Software Performance Tester">
+    </div>
+
+    <div class="w3-col m3">
       <img id="data_aq" src="assets/images/data_aq.jpg" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Data Aquisition Platform">
     </div>
 
     <div class="w3-col m3">
       <img id="piezo" src="assets/images/piezo.png" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Piezo-magnetic Simulation">
-    </div>
-
-    <div class="w3-col m3">
-      <img id="dnd" src="assets/images/dnd_table.png" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Dungeon Planner">
-    </div>
-
-    <div class="w3-col m3">
-      <img id="subnet" src="assets/images/subnet.png" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Subnet Calculator">
     </div>
   </div>
   <div class="w3-center"><a href="https://github.com/kbvatral" target="_blank" class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">SEE MORE PROJECTS</a></div>
@@ -315,24 +315,27 @@ function onClick(element) {
                               <a href="https://github.com/kbvatral/piezomagnetic_simulation" target="_blank" 
                               class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">View Source</a>`;
       break;
-    case "dnd":
-      captionText.innerHTML = `One of my favorite ways to spend my down time is to play Dungeons and Dragons with my friends. 
-                              In talking with one of them, we both were frustrated that there were no really complete tools to 
-                              plan terrain and maps for a game. In addition, I wanted something that I would be able to use during 
-                              a game session to manage player and np stats and positions. So, I decided to begin development of my 
-                              own platformer for these functions. Written in Java using the Swing libraries. Currently in development.<br/>
-                              <a href="https://github.com/kbvatral/DnD-Table" target="_blank" 
-                              class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">View Source</a>`;
+    case "hcl":
+      captionText.innerHTML = `During the summer after my junior year, I was hired as an intern at HCL Technologies in the 
+                              software development division. The team that I was a part of developed tools to make software 
+                              performance testing easier and faster. More specifically, as software development moves to a more 
+                              left-shifted, continuous deployment model, there is a necessity for more testing. However, analysis 
+                              of test data takes a significant amount of time and man-power, and with the increasing amount of 
+                              testing, analysis is not always possible. During this summer, I developed a neural-network based 
+                              algorithm to help automate and speed up analysis of software performance test results. The tool helps 
+                              to highlight specific areas of performance test data which require attention and further analysis, 
+                              thus reducing the volume of test data that engineers must parse. The algorithm that I developed 
+                              during this summer is currently being patented and productionized by the company.`;
       break;
-    case "subnet":
-      captionText.innerHTML = `In Fall 2017, I was taking a class called Networks and Telecommunications. As part of this class,
-                              we were learning how to subnet IPv4 networks. While working on our homework one day, one of my classmates
-                              and I decided that we could apply some of our programming knowledge to make our work easier. So, we
-                              developed this subnet calculator to assist us in our classwork.<br/>
-                              <a href="http://subnet.vatral.net" target="_blank" 
-                              class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">View Demo</a>
-                              <a href="https://github.com/kbvatral/subnet-calculator" target="_blank" 
-                              class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">View Source</a>`;
+    case "fusion":
+      captionText.innerHTML = `In my senior year at ENC, I am working on earthquake forecasting research as my senior thesis.
+                              It has been shown in previous research that several physical phenomena, which we call precursors,
+                              have anomalous behavior prior to large scale seismic activities; however, any one of these precursors 
+                              can also show anomalous behavior due to other factors during quiet seismic times. The basis of my 
+                              thesis is a data fusion algorithm, which would show a correlation between the anomalous behavior of 
+                              multiple precursors before large earthquakes. The basic concept is that any one of the precursors can 
+                              potentially be incorrect at a specific time, but if all the precursors point to the same anomalous 
+                              behavior simultaneously, it is much less likely that they are erroneous. `;
       break;
   }
 
