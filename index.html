@@ -24,19 +24,19 @@ body, html {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('assets/images/boston-skyline-min.jpg');
+    background-image: url('assets/images/nashville_skyline_3_hd.jpg');
     min-height: 100%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("assets/images/laptop-desk-min.jpg");
+    background-image: url("assets/images/typewriter_2.jpg");
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("assets/images/suits-min.jpeg");
+    background-image: url("assets/images/telephones.jpg");
     min-height: 400px;
 }
 
@@ -81,7 +81,7 @@ body, html {
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar hidden" id="myNavbar">
+  <div class="w3-bar w3-card-2 w3-white" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
     </a>
@@ -343,16 +343,16 @@ function onClick(element) {
 }
 
 // Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
-    } else {
-        //navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "hidden");
-        navbar.className = "w3-bar" + " hidden";
-    }
-}
+//window.onscroll = function() {myFunction()};
+//function myFunction() {
+//    var navbar = document.getElementById("myNavbar");
+//    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+//    } else {
+//        //navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "hidden");
+//        navbar.className = "w3-bar" + " hidden";
+//    }
+//}
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function toggleFunction() {
