@@ -150,9 +150,9 @@ body, html {
       <i class="fa fa-cogs w3-xlarge" style="padding-right:5px;"></i> <b>Proficient</b>
     </p>
     <div class="w3-center">
+        <span class="circle margin-2">Python</span>
         <span class="circle margin-2">C++</span>
         <span class="circle margin-2">Java</span>
-        <span class="circle margin-2">Python</span>
         <span class="circle margin-2">Debian</span>
         <span class="circle margin-2">CentOS</span>
         <span class="circle margin-2">Git/Github</span>
@@ -220,36 +220,85 @@ body, html {
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest and most interesting projects<br> Click on the images to see more information</em></p><br>
+  <p class="w3-center"><em>Here are some of my latest and most interesting projects</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img id="fusion" src="assets/images/data_fusion.PNG" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Data Fusion Algorithm">
+  <div class="w3-card w3-row-padding w3-padding-16">
+    <div class="w3-col w3-center m3 w3-hide-small w3-padding">
+      <img id="fusion" src="assets/images/data_fusion.PNG" style="width:100%;" class="w3-margin-top" alt="TEC Correlation">
+      <a href="assets/documents/ENC_thesis.pdf" target="_blank" class="w3-button w3-padding-large w3-light-grey w3-margin-top">Download Paper</a>
     </div>
-
-    <div class="w3-col m3">
-      <img id="hcl" src="assets/images/HCL-Tech-Logo.jpg" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Software Performance Tester">
-    </div>
-
-    <div class="w3-col m3">
-      <img id="data_aq" src="assets/images/data_aq.jpg" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Data Aquisition Platform">
-    </div>
-
-    <div class="w3-col m3">
-      <img id="piezo" src="assets/images/piezo.png" style="width:100%" height="175px" onclick="onClick(this)" class="w3-hover-opacity" alt="Piezo-magnetic Simulation">
+    <div class="w3-col m9">
+      <h5>Pre-seismic TEC Correlation</h5>
+      <p>
+          For my senior thesis at Eastern Nazarene College, I worked on earthquake forecasting research.
+          It has been shown in previous research that several physical phenomena, which we call precursors,
+          have anomalous behavior prior to large scale seismic activities. One such precursor is Total Electron Content.
+          In this study, we examine TEC data from 2014 during certain days near and on the date of the 6.0 Mw Napa Valley earthquake in California, USA. 
+          We show by adaptively truncated Hotelling’s T2 test that TEC in the Napa region for a known non-seismic baseline 
+          is statistically different than the TEC during several weeks surrounding the earthquake. 
+          This suggests a potential correlation between atmospheric TEC and major seismic activity.
+          This work is currently submitted for publication.
+      </p>
     </div>
   </div>
+  <div class="w3-card w3-row-padding w3-padding-16 w3-margin-top">
+      <div class="w3-col w3-center m3 w3-hide-small w3-padding">
+        <img id="fusion" src="assets/images/HCL-Tech-Logo.jpg" style="width:100%;" class="w3-margin-top" alt="Software Performance Tester">
+      </div>
+      <div class="w3-col m9">
+        <h5>Automated Software Performance Test Analysis</h5>
+        <p>
+            During the summer of 2018, I was hired as an intern at HCL Technologies in the 
+            software development division. The team that I was a part of developed tools to make software 
+            performance testing easier and faster. More specifically, as software development moves to a more 
+            left-shifted, continuous deployment model, there is a necessity for more testing. However, analysis 
+            of test data takes a significant amount of time and man-power, and with the increasing amount of 
+            testing, analysis is not always possible. During this summer, I developed a neural-network based 
+            algorithm to help automate and speed up analysis of software performance test results. The tool helps 
+            to highlight specific areas of performance test data which require attention and further analysis, 
+            thus reducing the volume of test data that engineers must parse. The algorithm that I developed 
+            during this summer is currently being patented and productionized by the company.
+        </p>
+      </div>
+    </div>
+    <div class="w3-card w3-row-padding w3-padding-16 w3-margin-top">
+        <div class="w3-col w3-center m3 w3-hide-small w3-padding">
+          <img id="fusion" src="assets/images/data_aq.jpg" style="width:100%;" class="w3-margin-top" alt="Data Aquisition Platform">
+          <a href="https://github.com/kbvatral/data-acquisition-platform" target="_blank" class="w3-button w3-padding-large w3-light-grey w3-margin-top">View Source</a>
+        </div>
+        <div class="w3-col m9">
+          <h5>Data Aquisition Platorm</h5>
+          <p>
+              In the summer of 2017, I was a part of a research team working on developing a platform for 
+              earthquake forecasting. My portion of the project was to develop a central platform that would 
+              collect the data, and to create a server onto which this data could be transmitted for later 
+              analysis. The platform consisted of a raspberry pi with an adafruit ADC. Data was recorded, 
+              processed, and uploaded by python script that runs on the pi. Data was transmitted to an InfuxDB 
+              database running on a CentOS server hardened to CIS benchmarks. The platform will eventually be 
+              deployed in remote locations along fault lines to collect metrics related to earthquakes.
+              
+          </p>
+        </div>
+      </div>
+      <div class="w3-card w3-row-padding w3-padding-16 w3-margin-top">
+          <div class="w3-col w3-center m3 w3-hide-small w3-padding">
+            <img id="fusion" src="assets/images/piezo.png" style="width:100%;" class="w3-margin-top" alt="Piezo-magnetic Simulation">
+            <a href="https://github.com/kbvatral/piezomagnetic_simulation" target="_blank" class="w3-button w3-padding-large w3-light-grey w3-margin-top">View Source</a>
+          </div>
+          <div class="w3-col m9">
+            <h5>Simulation of Piezo-magnetic Potential</h5>
+            <p>
+                In the summer of 2016, I was a part of a research team working on developing a platform for 
+                earthquake forecasting. Part of my portion of the project was to research the theory behind 
+                piezo-magnetism and how it relates to pre-seismic magnetic anomalies. As part of this research, 
+                I developed a MATLAB simulation based on calculations of piezo-magnetism developed in Sasai (1980). 
+                The simulation allowed the input of various relevant fault parameters and outputed a map of the 
+                resulting piezo-magnetic field.
+            </p>
+          </div>
+        </div>
   <div class="w3-center"><a href="https://github.com/kbvatral" target="_blank" class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">SEE MORE PROJECTS</a></div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image" onclick="this.parentElement.style.display='none'"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
-    <img id="img01" class="w3-image" width="50%">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
@@ -285,61 +334,6 @@ body, html {
 </footer>
 
 <script>
-
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-
-  switch(element.id){
-    case "data_aq":
-      captionText.innerHTML = `In the summer of 2017, I was a part of a research team working on developing a platform for 
-                              earthquake forecasting. My portion of the project was to develop a central platform that would 
-                              collect the data, and to create a server onto which this data could be transmitted for later 
-                              analysis. The platform consisted of a raspberry pi with an adafruit ADC. Data was recorded, 
-                              processed, and uploaded by python script that runs on the pi. Data was transmitted to an InfuxDB 
-                              database running on a CentOS server hardened to CIS benchmarks. The platform will eventually be 
-                              deployed in remote locations along fault lines to collect metrics related to earthquakes.<br/>
-                              <a href="https://github.com/kbvatral/data-acquisition-platform" target="_blank" 
-                              class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">View Source</a>`;
-      break;
-    case "piezo":
-      captionText.innerHTML = `In the summer of 2016, I was a part of a research team working on developing a platform for 
-                              earthquake forecasting. Part of my portion of the project was to research the theory behind 
-                              piezo-magnetism and how it relates to pre-seismic magnetic anomalies. As part of this research, 
-                              I developed a MATLAB simulation based on calculations of piezo-magnetism developed in Sasai (1980). 
-                              The simulation allowed the input of various relevant fault parameters and outputed a map of the 
-                              resulting piezo-magnetic field.<br/>
-                              <a href="https://github.com/kbvatral/piezomagnetic_simulation" target="_blank" 
-                              class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">View Source</a>`;
-      break;
-    case "hcl":
-      captionText.innerHTML = `During the summer of 2018, I was hired as an intern at HCL Technologies in the 
-                              software development division. The team that I was a part of developed tools to make software 
-                              performance testing easier and faster. More specifically, as software development moves to a more 
-                              left-shifted, continuous deployment model, there is a necessity for more testing. However, analysis 
-                              of test data takes a significant amount of time and man-power, and with the increasing amount of 
-                              testing, analysis is not always possible. During this summer, I developed a neural-network based 
-                              algorithm to help automate and speed up analysis of software performance test results. The tool helps 
-                              to highlight specific areas of performance test data which require attention and further analysis, 
-                              thus reducing the volume of test data that engineers must parse. The algorithm that I developed 
-                              during this summer is currently being patented and productionized by the company.`;
-      break;
-    case "fusion":
-      captionText.innerHTML = `For my senior thesis at Eastern Nazarene College, I worked on earthquake forecasting research.
-                              It has been shown in previous research that several physical phenomena, which we call precursors,
-                              have anomalous behavior prior to large scale seismic activities. One such precursor is Total Electron Content.
-                              In this study, we examine TEC data from 2014 during certain days near and on the date of the 6.0 Mw Napa Valley earthquake in California, USA. 
-                              We show by adaptively truncated Hotelling’s T2 test that TEC in the Napa region for a known non-seismic baseline 
-                              is statistically different than the TEC during several weeks surrounding the earthquake. 
-                              This suggests a potential correlation between atmospheric TEC and major seismic activity.
-                              This work is currently submitted for publication.`;
-      break;
-  }
-
-  //captionText.innerHTML = element.alt;
-}
 
 // Change style of navbar on scroll
 //window.onscroll = function() {myFunction()};
